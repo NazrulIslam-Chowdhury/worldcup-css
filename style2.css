@@ -37,18 +37,27 @@ body {
     padding: 10px;
     font-weight: 700;
     font-size: large;
+    transition: width 1s, transform 1s;
 }
 
-/* main sction styles */
+.button-watch:hover {
+    width: 200px;
+    transform: translate(50px);
+}
+
+/* Main styles */
 .p1 {
     padding: 20px 28px 16px 10px;
     font-weight: 700;
     font-size: large;
     margin-top: 10px;
+    background-color: rgb(157, 60, 60);
+    transition: padding 1s, transform 1s;
 }
 
 .p1:hover {
-    background-color: rgb(157, 60, 60);
+    padding: 0 21px;
+    transform: scale(1);
 }
 
 .p2 {
@@ -62,24 +71,18 @@ body {
     padding: 18px 66px;
     font-weight: 700;
     font-size: large;
-    background-color: rgb(157, 60, 60);
     margin-top: 10px;
 }
 
 .options {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     background-color: rgba(0, 0, 0, 0.901);
     padding: 20px;
     margin-left: 40px;
     height: 10%;
     border-radius: 10px;
-}
-
-.transfer {
-    border: 1px solid black;
-    margin-right: 75%;
-    border-radius: 5px;
 }
 
 /* grid layout styles */
@@ -97,24 +100,38 @@ body {
     margin-left: 20px;
 }
 
-.img-info {
+.match1 {
     background-color: antiquewhite;
     padding: 10px;
     border-radius: 10px;
-    width: 310px;
-    height: 400px;
+    width: 290px;
+    height: 190px;
+    padding: 30px;
+    text-align: center;
+    transition: width 1s, height 1s, transform 1s;
 }
 
-.view-button {
+.match1:hover {
+    width: 310px;
+    height: 210px;
+    transform: scale(1.1);
+    box-shadow: 4px 4px black;
+}
+
+.back {
+    text-decoration: none;
     background-color: rgb(157, 60, 60);
-    margin-left: 48%;
-    margin-top: 10px;
-    border-radius: 2px;
-    padding: 10px;
+    padding: 20px 25px 16px 10px;
     font-weight: 700;
     font-size: large;
-    visibility: hidden;
-    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 5%;
+    transition: width 1s, transform 1s;
+}
+
+.back:hover {
+    width: 150px;
+    transform: translate(-50px);
 }
 
 /* footer styles */
@@ -166,6 +183,10 @@ footer hr {
         flex-direction: column;
     }
 
+    .header img {
+        vertical-align: middle;
+    }
+
     .options {
         background: none;
     }
@@ -199,11 +220,6 @@ footer hr {
         flex-direction: row;
     }
 
-    .header>.title-img {
-        margin-top: 66%;
-        margin-left: 10%;
-    }
-
     .options {
         flex-direction: row;
         background: none;
@@ -221,5 +237,9 @@ footer hr {
 
     .view-button {
         visibility: visible;
+    }
+
+    .footer>.menu a {
+        flex-direction: row;
     }
 }
