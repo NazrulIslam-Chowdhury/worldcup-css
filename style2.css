@@ -19,7 +19,6 @@ body {
 .title-img {
     margin-top: 10px;
     margin-right: 95px;
-    position: relative;
 }
 
 .header-title {
@@ -183,8 +182,9 @@ footer hr {
         flex-direction: column;
     }
 
-    .header img {
-        vertical-align: middle;
+    .header>.title-img {
+        margin-top: 66%;
+        margin-left: 10%;
     }
 
     .options {
